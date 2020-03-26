@@ -4,6 +4,9 @@ using Entities;
 
 namespace BLL.Implementations
 {
+    /// <summary>
+    /// Data transfer validator.
+    /// </summary>
     public class DataTransferValidator : IValidator<DataTransfer>
     {
         private readonly string[] validCurrencyCodes = new string[]
@@ -368,6 +371,10 @@ namespace BLL.Implementations
             "JPN",
         };
 
+        /// <summary>
+        /// Validates value.
+        /// </summary>
+        /// <param name="value">Value to validate.</param>
         public void Validate(DataTransfer value)
         {
             if (value is null)

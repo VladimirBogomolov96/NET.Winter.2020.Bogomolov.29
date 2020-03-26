@@ -10,13 +10,24 @@ using NLog;
 
 namespace DependencyResolution
 {
+    /// <summary>
+    /// Resolves dependencies.
+    /// </summary>
     public class DependencyResolver
     {
+        /// <summary>
+        /// Gets IConfigurationRoot for program configuration.
+        /// </summary>
+        /// <value>IConfigurationRoot for program configuration.</value>
         public static IConfigurationRoot ConfigurationRoot { get; } = new ConfigurationBuilder()
                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                 .AddJsonFile("appsettings.json")
                 .Build();
 
+        /// <summary>
+        /// Creates IServiceProvider for dependecy resolution.
+        /// </summary>
+        /// <returns>IServiceProvider.</returns>
         public IServiceProvider CreateServiceProvider()
         {
             return new ServiceCollection()

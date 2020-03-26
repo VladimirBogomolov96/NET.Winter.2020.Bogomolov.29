@@ -4,5 +4,113 @@
         <name>DAL.Implementations</name>
     </assembly>
     <members>
+        <member name="T:DAL.Implementations.DataBaseCountReciever">
+            <summary>
+            Reciever of data vase statistic.
+            </summary>
+        </member>
+        <member name="M:DAL.Implementations.DataBaseCountReciever.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DAL.Implementations.DataBaseCountReciever"/> class.
+            </summary>
+            <param name="connectionString">Connection string to data base.</param>
+        </member>
+        <member name="M:DAL.Implementations.DataBaseCountReciever.GetStatistic">
+            <summary>
+            Gets statistic result.
+            </summary>
+            <returns>Statistic result.</returns>
+        </member>
+        <member name="M:DAL.Implementations.DataBaseCountReciever.Dispose">
+            <summary>
+            Implementation of dispose patthern.
+            </summary>
+        </member>
+        <member name="M:DAL.Implementations.DataBaseCountReciever.Dispose(System.Boolean)">
+            <summary>
+            Implementation of dispose patthern.
+            </summary>
+            <param name="disposing">Whether called from Dispose.</param>
+        </member>
+        <member name="T:DAL.Implementations.DataTransferToDataBaseSaver">
+            <summary>
+            DataTransfer saver to data base.
+            </summary>
+        </member>
+        <member name="M:DAL.Implementations.DataTransferToDataBaseSaver.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DAL.Implementations.DataTransferToDataBaseSaver"/> class.
+            </summary>
+            <param name="connectionString">Connection string to data base.</param>
+        </member>
+        <member name="M:DAL.Implementations.DataTransferToDataBaseSaver.SaveData(System.Collections.Generic.IEnumerable{Entities.DataTransfer})">
+            <summary>
+            Saves data.
+            </summary>
+            <param name="values">Values to save.</param>
+        </member>
+        <member name="M:DAL.Implementations.DataTransferToDataBaseSaver.Dispose">
+            <summary>
+            Implementation of dispose patthern.
+            </summary>
+        </member>
+        <member name="M:DAL.Implementations.DataTransferToDataBaseSaver.Dispose(System.Boolean)">
+            <summary>
+            Implementation of dispose patthern.
+            </summary>
+            <param name="disposing">Whether called from Dispose.</param>
+        </member>
+        <member name="T:DAL.Implementations.StringsFromStreamDataProvider">
+            <summary>
+            String data provider.
+            </summary>
+        </member>
+        <member name="M:DAL.Implementations.StringsFromStreamDataProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DAL.Implementations.StringsFromStreamDataProvider"/> class.
+            </summary>
+            <param name="path">Path to file to get data.</param>
+        </member>
+        <member name="M:DAL.Implementations.StringsFromStreamDataProvider.GetData">
+            <summary>
+            Provides data.
+            </summary>
+            <returns>Data sequence.</returns>
+        </member>
+        <member name="M:DAL.Implementations.StringsFromStreamDataProvider.Dispose">
+            <summary>
+            Implementation of dispose patthern.
+            </summary>
+        </member>
+        <member name="M:DAL.Implementations.StringsFromStreamDataProvider.Dispose(System.Boolean)">
+            <summary>
+            Implementation of dispose patthern.
+            </summary>
+            <param name="disposing">Whether called from Dispose.</param>
+        </member>
+        <member name="T:DAL.Implementations.TradeDataStorage">
+            <summary>
+            Trade data concrete storage.
+            </summary>
+        </member>
+        <member name="M:DAL.Implementations.TradeDataStorage.#ctor(DAL.Contract.IDataProvider{System.String},DAL.Contract.IDataSaver{Entities.DataTransfer})">
+            <summary>
+            Initializes a new instance of the <see cref="T:DAL.Implementations.TradeDataStorage"/> class.
+            </summary>
+            <param name="dataProvider">Inner data provider.</param>
+            <param name="dataSaver">Inner data saver.</param>
+        </member>
+        <member name="M:DAL.Implementations.TradeDataStorage.GetData">
+            <summary>
+            Provides data.
+            </summary>
+            <returns>Data sequence.</returns>
+        </member>
+        <member name="M:DAL.Implementations.TradeDataStorage.SaveData(System.Collections.Generic.IEnumerable{Entities.DataTransfer})">
+            <summary>
+            Saves data.
+            </summary>
+            <param name="values">Values to save.</param>
+        </member>
     </members>
 </doc>

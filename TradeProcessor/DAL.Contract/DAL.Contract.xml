@@ -4,5 +4,88 @@
         <name>DAL.Contract</name>
     </assembly>
     <members>
+        <member name="T:DAL.Contract.IDataProvider`1">
+            <summary>
+            Data provider contract.
+            </summary>
+            <typeparam name="T">Type of data.</typeparam>
+        </member>
+        <member name="M:DAL.Contract.IDataProvider`1.GetData">
+            <summary>
+            Provides data.
+            </summary>
+            <returns>Data sequence.</returns>
+        </member>
+        <member name="T:DAL.Contract.IDataSaver`1">
+            <summary>
+            Data saver contract.
+            </summary>
+            <typeparam name="T">Type of data.</typeparam>
+        </member>
+        <member name="M:DAL.Contract.IDataSaver`1.SaveData(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Saves data.
+            </summary>
+            <param name="values">Values to save.</param>
+        </member>
+        <member name="T:DAL.Contract.IStatisticReciever`1">
+            <summary>
+            Statistic reciever contract.
+            </summary>
+            <typeparam name="T">Type of statistic result.</typeparam>
+        </member>
+        <member name="M:DAL.Contract.IStatisticReciever`1.GetStatistic">
+            <summary>
+            Gets statistic result.
+            </summary>
+            <returns>Statistic result.</returns>
+        </member>
+        <member name="T:DAL.Contract.Storage`2">
+            <summary>
+            Storage abstract class.
+            </summary>
+            <typeparam name="TProvide">Type of data to get.</typeparam>
+            <typeparam name="TSave">Type of data to save.</typeparam>
+        </member>
+        <member name="F:DAL.Contract.Storage`2.dataProvider">
+            <summary>
+            Inner data provider.
+            </summary>
+        </member>
+        <member name="F:DAL.Contract.Storage`2.dataSaver">
+            <summary>
+            Inner data saver.
+            </summary>
+        </member>
+        <member name="M:DAL.Contract.Storage`2.#ctor(DAL.Contract.IDataProvider{`0},DAL.Contract.IDataSaver{`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:DAL.Contract.Storage`2"/> class.
+            </summary>
+            <param name="dataProvider">Inner data provider.</param>
+            <param name="dataSaver">Inner data saver.</param>
+        </member>
+        <member name="M:DAL.Contract.Storage`2.GetData">
+            <summary>
+            Provides data.
+            </summary>
+            <returns>Data sequence.</returns>
+        </member>
+        <member name="M:DAL.Contract.Storage`2.SaveData(System.Collections.Generic.IEnumerable{`1})">
+            <summary>
+            Saves data.
+            </summary>
+            <param name="values">Values to save.</param>
+        </member>
+        <member name="M:DAL.Contract.Storage`2.Dispose">
+            <summary>
+            Implementation of dispose patthern.
+            </summary>
+        </member>
+        <member name="M:DAL.Contract.Storage`2.Dispose(System.Boolean)">
+            <summary>
+            Implementation of dispose patthern.
+            </summary>
+            <param name="disposing">Whether called from Dispose.</param>
+        </member>
     </members>
 </doc>

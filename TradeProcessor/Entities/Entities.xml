@@ -4,5 +4,53 @@
         <name>Entities</name>
     </assembly>
     <members>
+        <member name="T:Entities.DataTransfer">
+            <summary>
+            Data transfer abstraction.
+            </summary>
+        </member>
+        <member name="P:Entities.DataTransfer.CountryCode">
+            <summary>
+            Gets or sets country code.
+            </summary>
+            <value>Country code value.</value>
+        </member>
+        <member name="P:Entities.DataTransfer.CurrencyCode">
+            <summary>
+            Gets or sets currency code.
+            </summary>
+            <value>Currency code value.</value>
+        </member>
+        <member name="P:Entities.DataTransfer.AmountOfTrades">
+            <summary>
+            Gets or sets amount of trades.
+            </summary>
+            <value>Amount of trades.</value>
+        </member>
+        <member name="P:Entities.DataTransfer.Cost">
+            <summary>
+            Gets or sets cost.
+            </summary>
+            <value>Cost.</value>
+        </member>
+        <member name="T:Entities.TradeData">
+            <summary>
+            Contains information about trades.
+            </summary>
+        </member>
+        <member name="M:Entities.TradeData.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Entities.TradeData"/> class.
+            </summary>
+        </member>
+        <member name="M:Entities.TradeData.#ctor(System.String,System.String,System.Int32,System.Decimal)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Entities.TradeData"/> class.
+            </summary>
+            <param name="countryCode">Country code.</param>
+            <param name="currencyCode">Currency code.</param>
+            <param name="amountOfTrades">Amount of trades.</param>
+            <param name="cost">Cost.</param>
+        </member>
     </members>
 </doc>

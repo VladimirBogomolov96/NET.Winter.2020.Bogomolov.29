@@ -4,5 +4,15 @@
         <name>ConsoleUI</name>
     </assembly>
     <members>
+        <member name="T:ConsoleUI.Program">
+            <summary>
+            UI class.
+            </summary>
+        </member>
+        <member name="M:ConsoleUI.Program.Main">
+            <summary>
+            Start point of program.
+            </summary>
+        </member>
     </members>
 </doc>

@@ -4,17 +4,29 @@ using Entities;
 
 namespace BLL.Implementations
 {
+    /// <summary>
+    /// String to TradeData converter.
+    /// </summary>
     public class StringToTradeDataConverter : IConverter<DataTransfer, string>
     {
         private const int AmountOfParameters = 3;
         private const int CodeLength = 6;
         private readonly IValidator<DataTransfer> validator;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StringToTradeDataConverter"/> class.
+        /// </summary>
+        /// <param name="validator">Validator.</param>
         public StringToTradeDataConverter(IValidator<DataTransfer> validator)
         {
             this.validator = validator;
         }
 
+        /// <summary>
+        /// Converts value of one type to another.
+        /// </summary>
+        /// <param name="source">Value to convert.</param>
+        /// <returns>Converted value.</returns>
         public DataTransfer Convert(string source)
         {
             if (source is null)

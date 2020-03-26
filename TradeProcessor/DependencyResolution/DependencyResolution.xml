@@ -4,5 +4,22 @@
         <name>DependencyResolution</name>
     </assembly>
     <members>
+        <member name="T:DependencyResolution.DependencyResolver">
+            <summary>
+            Resolves dependencies.
+            </summary>
+        </member>
+        <member name="P:DependencyResolution.DependencyResolver.ConfigurationRoot">
+            <summary>
+            Gets IConfigurationRoot for program configuration.
+            </summary>
+            <value>IConfigurationRoot for program configuration.</value>
+        </member>
+        <member name="M:DependencyResolution.DependencyResolver.CreateServiceProvider">
+            <summary>
+            Creates IServiceProvider for dependecy resolution.
+            </summary>
+            <returns>IServiceProvider.</returns>
+        </member>
     </members>
 </doc>

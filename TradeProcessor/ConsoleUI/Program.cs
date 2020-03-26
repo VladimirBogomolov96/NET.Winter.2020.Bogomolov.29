@@ -5,8 +5,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ConsoleUI
 {
+    /// <summary>
+    /// UI class.
+    /// </summary>
     public static class Program
     {
+        /// <summary>
+        /// Start point of program.
+        /// </summary>
         public static void Main()
         {
             var serviceProvider = new DependencyResolver().CreateServiceProvider();

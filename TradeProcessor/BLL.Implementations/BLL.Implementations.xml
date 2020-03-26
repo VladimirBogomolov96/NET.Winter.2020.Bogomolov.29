@@ -4,5 +4,54 @@
         <name>BLL.Implementations</name>
     </assembly>
     <members>
+        <member name="T:BLL.Implementations.DataTransferValidator">
+            <summary>
+            Data transfer validator.
+            </summary>
+        </member>
+        <member name="M:BLL.Implementations.DataTransferValidator.Validate(Entities.DataTransfer)">
+            <summary>
+            Validates value.
+            </summary>
+            <param name="value">Value to validate.</param>
+        </member>
+        <member name="T:BLL.Implementations.StringToTradeDataConverter">
+            <summary>
+            String to TradeData converter.
+            </summary>
+        </member>
+        <member name="M:BLL.Implementations.StringToTradeDataConverter.#ctor(BLL.Contract.IValidator{Entities.DataTransfer})">
+            <summary>
+            Initializes a new instance of the <see cref="T:BLL.Implementations.StringToTradeDataConverter"/> class.
+            </summary>
+            <param name="validator">Validator.</param>
+        </member>
+        <member name="M:BLL.Implementations.StringToTradeDataConverter.Convert(System.String)">
+            <summary>
+            Converts value of one type to another.
+            </summary>
+            <param name="source">Value to convert.</param>
+            <returns>Converted value.</returns>
+        </member>
+        <member name="T:BLL.Implementations.TradeProcessor">
+            <summary>
+            Trade processor.
+            </summary>
+        </member>
+        <member name="M:BLL.Implementations.TradeProcessor.#ctor(DAL.Contract.Storage{System.String,Entities.DataTransfer},NLog.ILogger,BLL.Contract.IConverter{Entities.DataTransfer,System.String},DAL.Contract.IStatisticReciever{System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:BLL.Implementations.TradeProcessor"/> class.
+            </summary>
+            <param name="storage">Storage.</param>
+            <param name="logger">Logger.</param>
+            <param name="converter">Converter.</param>
+            <param name="statisticReciever">Statistic reciever.</param>
+        </member>
+        <member name="M:BLL.Implementations.TradeProcessor.Run">
+            <summary>
+            Runs processor.
+            </summary>
+            <returns>Result of execution.</returns>
+        </member>
     </members>
 </doc>

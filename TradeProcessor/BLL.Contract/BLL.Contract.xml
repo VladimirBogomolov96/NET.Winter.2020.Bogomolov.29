@@ -4,5 +4,42 @@
         <name>BLL.Contract</name>
     </assembly>
     <members>
+        <member name="T:BLL.Contract.IConverter`2">
+            <summary>
+            Converter contract.
+            </summary>
+            <typeparam name="TResult">Type of result of conversion.</typeparam>
+            <typeparam name="TSource">Type of source of conversion.</typeparam>
+        </member>
+        <member name="M:BLL.Contract.IConverter`2.Convert(`1)">
+            <summary>
+            Converts value of one type to another.
+            </summary>
+            <param name="source">Value to convert.</param>
+            <returns>Converted value.</returns>
+        </member>
+        <member name="T:BLL.Contract.ITradeProcessor">
+            <summary>
+            Trade processor contract.
+            </summary>
+        </member>
+        <member name="M:BLL.Contract.ITradeProcessor.Run">
+            <summary>
+            Runs processor.
+            </summary>
+            <returns>Result of execution.</returns>
+        </member>
+        <member name="T:BLL.Contract.IValidator`1">
+            <summary>
+            Validator contract.
+            </summary>
+            <typeparam name="T">Type of value to validate.</typeparam>
+        </member>
+        <member name="M:BLL.Contract.IValidator`1.Validate(`0)">
+            <summary>
+            Validates value.
+            </summary>
+            <param name="value">Value to validate.</param>
+        </member>
     </members>
 </doc>
