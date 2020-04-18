@@ -15,10 +15,11 @@
             </summary>
             <value>IConfigurationRoot for program configuration.</value>
         </member>
-        <member name="M:DependencyResolution.DependencyResolver.CreateServiceProvider">
+        <member name="M:DependencyResolution.DependencyResolver.CreateServiceProvider(System.Int32)">
             <summary>
             Creates IServiceProvider for dependecy resolution.
             </summary>
+            <param name="variant">Variant of service to use.</param>
             <returns>IServiceProvider.</returns>
         </member>
     </members>

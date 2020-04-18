@@ -37,7 +37,7 @@ namespace DAL.Implementations
             this.sqlConnection.Open();
             foreach (DataTransfer dataTransfer in values)
             {
-                using var sqlCommand = new SqlCommand($"insert TradeData values ('{dataTransfer.CountryCode}','{dataTransfer.CurrencyCode}',{dataTransfer.AmountOfTrades},{dataTransfer.Cost})", this.sqlConnection);
+                using var sqlCommand = new SqlCommand($"insert TradeDatas values ('{dataTransfer.CountryCode}','{dataTransfer.CurrencyCode}',{dataTransfer.AmountOfTrades},{dataTransfer.Cost})", this.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
 

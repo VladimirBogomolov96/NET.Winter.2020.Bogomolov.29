@@ -27,7 +27,7 @@ namespace DAL.Implementations
         public int GetStatistic()
         {
             this.sqlConnection.Open();
-            using var sqlCommand = new SqlCommand("select count(*) from TradeData", this.sqlConnection);
+            using var sqlCommand = new SqlCommand("select count(*) from TradeDatas", this.sqlConnection);
             int count = (int)sqlCommand.ExecuteScalar();
             this.sqlConnection.Close();
             return count;
